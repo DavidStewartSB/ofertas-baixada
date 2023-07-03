@@ -1,0 +1,62 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "custom.css";
+
+
+.object-cover-card {
+    @apply object-contain w-[340px] h-[340px] p-1;
+}
+.object-cover-thumb {
+    @apply object-center object-contain w-full px-16 h-[400px];
+}
+
+#comments {
+    @apply mx-10;
+}
+.comment-reply-title {
+    @apply text-2xl font-bold;
+}
+
+table {
+    @apply table-auto border-collapse border border-slate-500 px-3;
+}
+
+td {
+    @apply border border-slate-500 px-3;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.image-container img {
+  transition: transform 0.5s;
+}
+.image-container:hover img {
+  transform: rotateY(180deg);
+}
+.hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.image-container:hover .hover-text {
+  opacity: 1;
+  }
+
+  .accordion.active {
+    @apply shadow-lg;
+  }
